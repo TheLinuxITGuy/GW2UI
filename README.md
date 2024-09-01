@@ -16,7 +16,6 @@ This is a stand-alone addon made for the Turtle WoW 1.12.1 client.
 - GW2 XP Bar
 
 ## Known issues
-- The red HP circle shrinks instead of losing health
 - Bag needs retextured
 - Long names don't left justify
 - zone text is massive
