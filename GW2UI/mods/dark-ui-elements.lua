@@ -3,12 +3,13 @@ local T = GW2UI.T
 local HookAddonOrVariable = GW2UI.HookAddonOrVariable
 local GetExpansion = GW2UI.GetExpansion
 local AddBorder = GW2UI.AddBorder
+color = { r = .3, g = .3, b = .3, a = .9}
 
 local module = GW2UI:register({
   title = T["Darkened UI"],
   description = T["Turns the entire interface into darker colors."],
   expansions = { ["vanilla"] = true, ["tbc"] = true },
-  enabled = nil,
+  enabled = true,
   color = { r = .3, g = .3, b = .3, a = .9}
 })
 
@@ -144,10 +145,13 @@ local function DarkenFrame(frame, r, g, b, a)
       if name and string.find(name, pattern) then AddSpecialBackground(frame, inset[1], inset[2], inset[3], inset[4]) end
     end
 
-    -- add black borders around specified buttons
+    --[[
+        -- add black borders around specified buttons
     for pattern, inset in pairs(borders) do
       if name and string.find(name, pattern) then AddBorder(frame, inset, module.color) end
     end
+    ]]
+
 
     -- scan through all regions (textures)
     for id, region in pairs({frame:GetRegions()}) do

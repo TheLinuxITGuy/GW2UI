@@ -12,7 +12,7 @@ local module = GW2UI:register({
 MinimapClock = CreateFrame("Frame", "Clock", Minimap)
 MinimapClock:Hide()
 MinimapClock:SetFrameLevel(64)
-MinimapClock:SetPoint("BOTTOM", MinimapCluster, "BOTTOM", 8, 18)
+MinimapClock:SetPoint("BOTTOM", MinimapCluster, "BOTTOM", 8, -10)
 MinimapClock:SetWidth(50)
 MinimapClock:SetHeight(23)
 MinimapClock:SetBackdrop({
