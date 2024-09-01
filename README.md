@@ -17,7 +17,10 @@ This is a stand-alone addon made for the Turtle WoW 1.12.1 client.
 
 ## Known issues
 - The red HP circle shrinks instead of losing health
-- Various other things
+- Bag needs retextured
+- Long names don't left justify
+- zone text is massive
+- XP text is covered by red HP circle
 
 ## Special Thanks
 - Based on [ShaguTweaks](https://shagu.org/ShaguTweaks/)
