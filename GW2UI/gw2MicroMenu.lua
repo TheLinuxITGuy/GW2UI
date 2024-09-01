@@ -5,7 +5,9 @@ This lua file hides the original Blizzard art work from 1.12. I've created new b
 Guild Wars 2.
 ]]
 
-local gw2art = "Interface\\AddOns\\GW2UI\\img\\microicons\\"
+local gw2artLFT = "Interface\\AddOns\\GW2UI\\img\\LFT\\"
+local gw2artLatency = "Interface\\AddOns\\GW2UI\\img\\Latency\\"
+local gw2artMicro = "Interface\\AddOns\\GW2UI\\img\\microicons\\"
 local gw2dimensions = 28
 local gw2space = 25
 ---------------------------------------------Help Micro Button--------------------------------------------------
@@ -19,17 +21,17 @@ mbHelp:SetHeight(gw2dimensions)
 mbHelp:SetPoint("TOPLEFT", UIParent, 0, 0) --sets the location of the button
 
 --Set the button's normal texture
-mbHelp:SetNormalTexture(gw2art .. "HelpMicroButton-Up.tga")
+mbHelp:SetNormalTexture(gw2artMicro .. "HelpMicroButton-Up.tga")
 local HelpNormalTexture = mbHelp:GetNormalTexture()
 HelpNormalTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's pushed texture
-mbHelp:SetPushedTexture(gw2art .. "HelpMicroButton-Up.tga")
+mbHelp:SetPushedTexture(gw2artMicro .. "HelpMicroButton-Up.tga")
 local HelpPushedTexture = mbHelp:GetPushedTexture()
 HelpPushedTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's highlight texture
-mbHelp:SetHighlightTexture(gw2art .. "HelpMicroButton-Up.tga")
+mbHelp:SetHighlightTexture(gw2artMicro .. "HelpMicroButton-Up.tga")
 local HelpHighlightTexture = mbHelp:GetHighlightTexture()
 HelpHighlightTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
@@ -62,17 +64,17 @@ mbMainMenu:SetHeight(gw2dimensions)
 mbMainMenu:SetPoint("TOPLEFT", mbHelp, gw2space, 0) --sets the location of the button original -30, 12
 
 --Set the button's normal texture
-mbMainMenu:SetNormalTexture(gw2art .. "MainMenuMicroButton-Up.tga")
+mbMainMenu:SetNormalTexture(gw2artMicro .. "MainMenuMicroButton-Up.tga")
 local MainMenuNormalTexture = mbMainMenu:GetNormalTexture()
 MainMenuNormalTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's pushed texture
-mbMainMenu:SetPushedTexture(gw2art .. "MainMenuMicroButton-Up.tga")
+mbMainMenu:SetPushedTexture(gw2artMicro .. "MainMenuMicroButton-Up.tga")
 local MainMenuPushedTexture = mbMainMenu:GetPushedTexture()
 MainMenuPushedTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's highlight texture
-mbMainMenu:SetHighlightTexture(gw2art .. "MainMenuMicroButton-Up.tga")
+mbMainMenu:SetHighlightTexture(gw2artMicro .. "MainMenuMicroButton-Up.tga")
 local MainMenuHighlightTexture = mbMainMenu:GetHighlightTexture()
 MainMenuHighlightTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
@@ -106,17 +108,17 @@ mbPvP:SetHeight(gw2dimensions)
 mbPvP:SetPoint("TOPLEFT", mbMainMenu, gw2space, 0) --sets the location of the button
 
 --Set the button's normal texture
-mbPvP:SetNormalTexture(gw2art .. "PvpMicroButton-Up.tga")
+mbPvP:SetNormalTexture(gw2artMicro .. "PvpMicroButton-Up.tga")
 local PvPNormalTexture = mbPvP:GetNormalTexture()
 PvPNormalTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's pushed texture
-mbPvP:SetPushedTexture(gw2art .. "PvpMicroButton-Up.tga")
+mbPvP:SetPushedTexture(gw2artMicro .. "PvpMicroButton-Up.tga")
 local PvPPushedTexture = mbPvP:GetPushedTexture()
 PvPPushedTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's highlight texture
-mbPvP:SetHighlightTexture(gw2art .. "PvpMicroButton-Up.tga")
+mbPvP:SetHighlightTexture(gw2artMicro .. "PvpMicroButton-Up.tga")
 local PvPHighlightTexture = mbPvP:GetHighlightTexture()
 PvPHighlightTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
@@ -165,17 +167,17 @@ mbShop:SetHeight(gw2dimensions)
 mbShop:SetPoint("TOPLEFT", mbPvP, gw2space, 0) --sets the location of the button
 
 --Set the button's normal texture
-mbShop:SetNormalTexture(gw2art .. "StoreMicroButton-Up.tga")
+mbShop:SetNormalTexture(gw2artMicro .. "StoreMicroButton-Up.tga")
 local ShopNormalTexture = mbShop:GetNormalTexture()
 ShopNormalTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's pushed texture
-mbShop:SetPushedTexture(gw2art .. "StoreMicroButton-Up.tga")
+mbShop:SetPushedTexture(gw2artMicro .. "StoreMicroButton-Up.tga")
 local ShopPushedTexture = mbShop:GetPushedTexture()
 ShopPushedTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's highlight texture
-mbShop:SetHighlightTexture(gw2art .. "StoreMicroButton-Up.tga")
+mbShop:SetHighlightTexture(gw2artMicro .. "StoreMicroButton-Up.tga")
 local ShopHighlightTexture = mbShop:GetHighlightTexture()
 ShopHighlightTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
@@ -212,17 +214,17 @@ mbLFT:SetHeight(gw2dimensions)
 mbLFT:SetPoint("TOPLEFT", mbShop, gw2space, 0) --sets the location of the button
 
 --Set the button's normal texture
-mbLFT:SetNormalTexture(gw2art .. "LFGMicroButton-Up.tga")
+mbLFT:SetNormalTexture(gw2artMicro .. "LFGMicroButton-Up.tga")
 local LFTNormalTexture = mbLFT:GetNormalTexture()
 LFTNormalTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's pushed texture
-mbLFT:SetPushedTexture(gw2art .. "LFGMicroButton-Up.tga")
+mbLFT:SetPushedTexture(gw2artMicro .. "LFGMicroButton-Up.tga")
 local LFTPushedTexture = mbLFT:GetPushedTexture()
 LFTPushedTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's highlight texture
-mbLFT:SetHighlightTexture(gw2art .. "LFGMicroButton-Up.tga")
+mbLFT:SetHighlightTexture(gw2artMicro .. "LFGMicroButton-Up.tga")
 local LFTHighlightTexture = mbLFT:GetHighlightTexture()
 LFTHighlightTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
@@ -254,7 +256,7 @@ overlay:SetPoint("CENTER", LFT_MinimapEye, "CENTER")
 -- Set the texture for the overlay
 overlay.texture = overlay:CreateTexture()
 overlay.texture:SetAllPoints()
-overlay.texture:SetTexture("Interface\\AddOns\\tDF\\img\\uigroupfinderflipbookeye.tga")
+overlay.texture:SetTexture(gw2artLFT .. "uigroupfinderflipbookeye.tga")
 overlay.texture:SetTexCoord(10/512, 55/512, 8/256, 55/256)
 
 ----------------ANIMATION----------------
@@ -385,17 +387,17 @@ mbEBC:SetWidth(gw2dimensions)
 mbEBC:SetHeight(gw2dimensions)
 mbEBC:SetPoint("TOPLEFT", mbLFT, gw2space, 0 ) --sets the location of the button
 --Set the button's normal texture
-mbEBC:SetNormalTexture(gw2art .. "GreatVaultMicroButton-Up.tga")
+mbEBC:SetNormalTexture(gw2artMicro .. "GreatVaultMicroButton-Up.tga")
 --Get the texture object and set its coordinates
 local EBCNormalTexture = mbEBC:GetNormalTexture()
 EBCNormalTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 --Set the button's pushed texture
-mbEBC:SetPushedTexture(gw2art .. "GreatVaultMicroButton-Up.tga")
+mbEBC:SetPushedTexture(gw2artMicro .. "GreatVaultMicroButton-Up.tga")
 --Get the texture object and set its coordinates
 local EBCPushedTexture = mbEBC:GetPushedTexture()
 EBCPushedTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 --Set the button's highlight texture
-mbEBC:SetHighlightTexture(gw2art .. "GreatVaultMicroButton-Up.tga")
+mbEBC:SetHighlightTexture(gw2artMicro .. "GreatVaultMicroButton-Up.tga")
 --Get the texture object and set its coordinates
 local EBCHighlightTexture = mbEBC:GetHighlightTexture()
 EBCHighlightTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32  )
@@ -438,17 +440,17 @@ mbWorldMap:SetHeight(gw2dimensions)
 mbWorldMap:SetPoint("TOPLEFT", mbEBC, gw2space, 0) --sets the location of the button
 
 --Set the button's normal texture
-mbWorldMap:SetNormalTexture(gw2art .. "WorldMapMicroButton-Up.tga")
+mbWorldMap:SetNormalTexture(gw2artMicro .. "WorldMapMicroButton-Up.tga")
 local WorldMapNormalTexture = mbWorldMap:GetNormalTexture()
 WorldMapNormalTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's pushed texture
-mbWorldMap:SetPushedTexture(gw2art .. "WorldMapMicroButton-Up.tga")
+mbWorldMap:SetPushedTexture(gw2artMicro .. "WorldMapMicroButton-Up.tga")
 local WorldMapPushedTexture = mbWorldMap:GetPushedTexture()
 WorldMapPushedTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's highlight texture
-mbWorldMap:SetHighlightTexture(gw2art .. "WorldMapMicroButton-Up.tga")
+mbWorldMap:SetHighlightTexture(gw2artMicro .. "WorldMapMicroButton-Up.tga")
 local WorldMapHighlightTexture = mbWorldMap:GetHighlightTexture()
 WorldMapHighlightTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
@@ -481,17 +483,17 @@ mbSocials:SetHeight(gw2dimensions)
 mbSocials:SetPoint("TOPLEFT", mbWorldMap, gw2space, 0) --sets the location of the button
 
 --Set the button's normal texture
-mbSocials:SetNormalTexture(gw2art .. "GuildMicroButton-Up.tga")
+mbSocials:SetNormalTexture(gw2artMicro .. "GuildMicroButton-Up.tga")
 local SocialsNormalTexture = mbSocials:GetNormalTexture()
 SocialsNormalTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's pushed texture
-mbSocials:SetPushedTexture(gw2art .. "GuildMicroButton-Up.tga")
+mbSocials:SetPushedTexture(gw2artMicro .. "GuildMicroButton-Up.tga")
 local SocialsPushedTexture = mbSocials:GetPushedTexture()
 SocialsPushedTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's highlight texture
-mbSocials:SetHighlightTexture(gw2art .. "GuildMicroButton-Up.tga")
+mbSocials:SetHighlightTexture(gw2artMicro .. "GuildMicroButton-Up.tga")
 local SocialsHighlightTexture = mbSocials:GetHighlightTexture()
 SocialsHighlightTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
@@ -523,17 +525,17 @@ mbQuestLog:SetHeight(gw2dimensions)
 mbQuestLog:SetPoint("TOPLEFT", mbSocials, gw2space, 0) --sets the location of the button
 
 --Set the button's normal texture
-mbQuestLog:SetNormalTexture(gw2art .. "QuestLogMicroButton-Up.tga")
+mbQuestLog:SetNormalTexture(gw2artMicro .. "QuestLogMicroButton-Up.tga")
 local QuestLogNormalTexture = mbQuestLog:GetNormalTexture()
 QuestLogNormalTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's pushed texture
-mbQuestLog:SetPushedTexture(gw2art .. "QuestLogMicroButton-Up.tga")
+mbQuestLog:SetPushedTexture(gw2artMicro .. "QuestLogMicroButton-Up.tga")
 local QuestLogPushedTexture = mbQuestLog:GetPushedTexture()
 QuestLogPushedTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's highlight texture
-mbQuestLog:SetHighlightTexture(gw2art .. "QuestLogMicroButton-Up.tga")
+mbQuestLog:SetHighlightTexture(gw2artMicro .. "QuestLogMicroButton-Up.tga")
 local QuestLogHighlightTexture = mbQuestLog:GetHighlightTexture()
 QuestLogHighlightTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32   )
 
@@ -567,17 +569,17 @@ mbTalent:SetHeight(gw2dimensions)
 mbTalent:SetPoint("TOPLEFT", mbQuestLog, gw2space, 0) --sets the location of the button
 
 --Set the button's normal texture
-mbTalent:SetNormalTexture(gw2art .. "TalentMicroButton-Up.tga")
+mbTalent:SetNormalTexture(gw2artMicro .. "TalentMicroButton-Up.tga")
 local TalentNormalTexture = mbTalent:GetNormalTexture()
 TalentNormalTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's pushed texture
-mbTalent:SetPushedTexture(gw2art .. "TalentMicroButton-Up.tga")
+mbTalent:SetPushedTexture(gw2artMicro .. "TalentMicroButton-Up.tga")
 local TalentPushedTexture = mbTalent:GetPushedTexture()
 TalentPushedTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's highlight texture
-mbTalent:SetHighlightTexture(gw2art .. "TalentMicroButton-Up.tga")
+mbTalent:SetHighlightTexture(gw2artMicro .. "TalentMicroButton-Up.tga")
 local TalentHighlightTexture = mbTalent:GetHighlightTexture()
 TalentHighlightTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
@@ -609,17 +611,17 @@ mbSpellBook:SetHeight(gw2dimensions)
 mbSpellBook:SetPoint("TOPLEFT", mbTalent, gw2space, 0) --sets the location of the button
 
 --Set the button's normal texture
-mbSpellBook:SetNormalTexture(gw2art .. "SpellbookMicroButton-Up.tga")
+mbSpellBook:SetNormalTexture(gw2artMicro .. "SpellbookMicroButton-Up.tga")
 local SpellbookNormalTexture = mbSpellBook:GetNormalTexture()
 SpellbookNormalTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's pushed texture
-mbSpellBook:SetPushedTexture(gw2art .. "SpellbookMicroButton-Up.tga")
+mbSpellBook:SetPushedTexture(gw2artMicro .. "SpellbookMicroButton-Up.tga")
 local SpellbookPushedTexture = mbSpellBook:GetPushedTexture()
 SpellbookPushedTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 --Set the button's highlight texture
-mbSpellBook:SetHighlightTexture(gw2art .. "SpellbookMicroButton-Up.tga")
+mbSpellBook:SetHighlightTexture(gw2artMicro .. "SpellbookMicroButton-Up.tga")
 local SpellbookHighlightTexture = mbSpellBook:GetHighlightTexture()
 SpellbookHighlightTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
@@ -654,17 +656,17 @@ mbCharacter:ClearAllPoints()
 mbCharacter:SetPoint("TOPLEFT", mbSpellBook, gw2space, 0) -- position Character button next to Spellbook
 
 -- Set the button's normal texture
-mbCharacter:SetNormalTexture(gw2art .. "CharacterMicroButton-Up.tga")
+mbCharacter:SetNormalTexture(gw2artMicro .. "CharacterMicroButton-Up.tga")
 local CharacterNormalTexture = mbCharacter:GetNormalTexture()
 CharacterNormalTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 -- Set the button's pushed texture
-mbCharacter:SetPushedTexture(gw2art .. "CharacterMicroButton-Up.tga")
+mbCharacter:SetPushedTexture(gw2artMicro .. "CharacterMicroButton-Up.tga")
 local CharacterPushedTexture = mbCharacter:GetPushedTexture()
 CharacterPushedTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
 -- Set the button's highlight texture
-mbCharacter:SetHighlightTexture(gw2art .. "CharacterMicroButton-Up.tga")
+mbCharacter:SetHighlightTexture(gw2artMicro .. "CharacterMicroButton-Up.tga")
 local CharacterHighlightTexture = mbCharacter:GetHighlightTexture()
 CharacterHighlightTexture:SetTexCoord(0/32, 32/32, 0/32, 32/32)
 
@@ -692,7 +694,7 @@ local mbLatency = MainMenuBarPerformanceBarFrameButton
 
 -- Set the normal texture and store a reference to it
 mbLatency.texture = mbLatency:CreateTexture(nil, "BACKGROUND")
-mbLatency:SetNormalTexture("Interface\\AddOns\\tDF\\img\\Latency.tga")
+mbLatency:SetNormalTexture(gw2artLatency .. "Latency.tga")
 --mbLatency:SetTexCoord(3/32, 28/32, 56/64, 60/64)
 -- Set the position and size of your button
 mbLatency:ClearAllPoints()
@@ -707,17 +709,17 @@ mbLatency:SetScript("OnUpdate", function(self, elapsed)
   --this.texture:SetVertexColor(0, 1, 0)
   -- Change the color based on latency
   if latencyHome < 200 then
-    mbLatency:SetNormalTexture("Interface\\AddOns\\tDF\\img\\LatencyGreen.tga")
+    mbLatency:SetNormalTexture(gw2artLatency .. "LatencyGreen.tga")
       -- Latency is good, set color to green
       --this.texture:SetVertexColor(0, 1, 0)
   elseif latencyHome < 300 then
       -- Latency is poor, set color to yellow
       --this.texture:SetVertexColor(1, 1, 0)
-      mbLatency:SetNormalTexture("Interface\\AddOns\\tDF\\img\\LatencyYellow.tga")
+      mbLatency:SetNormalTexture(gw2artLatency .. "LatencyYellow.tga")
   else
       -- Latency is bad, set color to red
       --this.texture:SetVertexColor(1, 0, 0)
-      mbLatency:SetNormalTexture("Interface\\AddOns\\tDF\\img\\LatencyRed.tga")
+      mbLatency:SetNormalTexture(gw2artLatency .. "LatencyRed.tga")
   end
 end)
 ---------------------------------------------Latency Micro Button---------------------------------------------

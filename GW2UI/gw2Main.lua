@@ -265,13 +265,17 @@ local _G = GW2UI.GetGlobalEnv()
           ShapeshiftBarFrame:SetPoint("BOTTOMLEFT", anchor, "TOPLEFT", -10, 2 + offset)
       end
       end)
-
-      -- move castbar ontop of other bars
-      local anchor = MainMenuBarArtFrame
+      --[[
+            -- move castbar ontop of other bars
+      local anchor = circleFrame
       anchor = MultiBarBottomLeft:IsVisible() and MultiBarBottomLeft or anchor
       anchor = MultiBarBottomRight:IsVisible() and MultiBarBottomRight or anchor
       local pet_offset = PetActionBarFrame:IsVisible() and 40 or 0
-      CastingBarFrame:SetPoint("BOTTOM", anchor, "TOP", 0, 50 + pet_offset)
+      CastingBarFrame:SetPoint("BOTTOM", anchor, "TOP", 0, 100 + pet_offset)
+      ]]
+      CastingBarFrame:ClearAllPoints()
+      CastingBarFrame:SetPoint("CENTER", circleFrame, 0, -300)
+
   end
 
   --Hide the original MainMenuBarPerformanceBarFrame
@@ -369,71 +373,6 @@ local _G = GW2UI.GetGlobalEnv()
             end
         end
     end
-
-    -- Create a frame for the circle
-    local circleFrame = CreateFrame("Frame", "CircleFrame", UIParent)
-    circleFrame:SetHeight(100)
-    circleFrame:SetWidth(100)
-    --circleFrame:SetPoint("CENTER", UIParent, 0, 0) -- Center the circle in the 100 pixels space
-    circleFrame:SetPoint("LEFT", _G["ActionButton6"], "RIGHT", 0, 26) -- Center the circle in the 100 pixels space
-
-      -- Add the mask texture
-    local mask = circleFrame:CreateTexture(nil, "BACKGROUND")
-    mask:SetTexture(gw2art .. "mask.tga")
-    mask:SetAllPoints(circleFrame)
-    
-    -- Add the globe texture
-    local globeTexture = circleFrame:CreateTexture(nil, "ARTWORK")
-    --globeTexture:SetTexture(gw2art .. "globetextured.tga")
-    globeTexture:SetTexture(gw2art .. "mask.tga")
-    globeTexture:SetAllPoints(circleFrame)
-
-    -- Add the border texture
-    local border = circleFrame:CreateTexture(nil, "OVERLAY")
-    border:SetTexture(gw2art .. "globeborder.tga")
-    border:SetAllPoints(circleFrame)
-
-    -- Create a frame to act as a mask
-    local healthMask = CreateFrame("Frame", nil, circleFrame)
-    healthMask:SetWidth(100)
-    healthMask:SetHeight(100)
-    healthMask:SetPoint("BOTTOM", circleFrame, "BOTTOM", 0, 0)
-    healthMask:SetFrameLevel(circleFrame:GetFrameLevel() + 1)
-
-    -- Add a texture to the mask frame
-    local healthMaskTexture = healthMask:CreateTexture(nil, "BACKGROUND")
-    healthMaskTexture:SetTexture(gw2art .. "globetextured.tga")
-    healthMaskTexture:SetAllPoints(healthMask)
-
-    -- Create a frame for the health text
-    local healthTextFrame = CreateFrame("Frame", nil, circleFrame)
-    healthTextFrame:SetAllPoints(circleFrame)
-    healthTextFrame:SetFrameLevel(circleFrame:GetFrameLevel() + 2)
-
-    -- Create a font string to display health
-    local healthText = healthTextFrame:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-    healthText:SetPoint("CENTER", healthTextFrame, "CENTER", 0, 0)
-    healthText:SetTextColor(1, 1, 1, 1) -- White color
-
-      -- Function to update health text and mask height
-      local function UpdateHealth()
-        local health = UnitHealth("player")
-        local maxHealth = UnitHealthMax("player")
-        local healthPercent = health / maxHealth
-
-        healthText:SetText(health .. " / " .. maxHealth)
-
-        -- Update mask height based on health percentage
-        healthMask:SetHeight(100 * healthPercent)
-      end 
-
-    -- Register event to update health
-    circleFrame:RegisterEvent("UNIT_HEALTH")
-    circleFrame:RegisterEvent("UNIT_MAXHEALTH")
-    circleFrame:SetScript("OnEvent", UpdateHealth)
-
-    -- Initial update
-    UpdateHealth()
 
   end
 

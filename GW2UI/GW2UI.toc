@@ -82,8 +82,11 @@ mods\hide-bags.lua
 
 # GW2UI
 gw2Main.lua
+gw2Globe.lua
 gw2MicroMenu.lua
 gw2QuestTracker.lua
 gw2GameToolTip.lua
 tBagSort.lua
 SUCC-bag.lua
+gw2Unitframes.lua
+
