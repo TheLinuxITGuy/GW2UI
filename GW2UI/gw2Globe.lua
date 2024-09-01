@@ -1,4 +1,3 @@
-
 local _G = GW2UI.GetGlobalEnv()
 local gw2art = "Interface\\AddOns\\GW2UI\\img\\globe\\"
 
@@ -16,12 +15,6 @@ circleFrame:RegisterForClicks("LeftButtonUp")
 circleFrame:SetScript("OnClick", function()
     TargetUnit("player") -- Select yourself as the target
 end)
---[[
-circleFrame:SetScript("OnEnter", function()  
-    TargetUnit("player")
-end)
-]]
-
 
 -- Add the mask texture
 local mask = circleFrame:CreateTexture(nil, "BACKGROUND")
@@ -71,6 +64,7 @@ local function UpdateHealth()
 
     -- Update mask height based on health percentage
     healthMask:SetHeight(100 * healthPercent)
+    healthMaskTexture:SetTexCoord(0, 1, 1 - healthPercent, 1)
 end 
 
 -- Register event to update health
@@ -80,4 +74,3 @@ circleFrame:SetScript("OnEvent", UpdateHealth)
 
 -- Initial update
 UpdateHealth()
-
