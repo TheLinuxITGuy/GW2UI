@@ -230,7 +230,7 @@ local _G = GW2UI.GetGlobalEnv()
     elseif MultiBarBottomLeft:IsVisible() then
         anchor = MultiBarBottomLeft
     end
-    PetActionBarFrame:SetPoint("BOTTOM", anchor, "TOP", 0, 3)
+    PetActionBarFrame:SetPoint("CENTER", anchor, "CENTER", -30, 70)  --MOVES PET BAR
   end
 
   -- Call the function initially to set the position
@@ -265,14 +265,7 @@ local _G = GW2UI.GetGlobalEnv()
           ShapeshiftBarFrame:SetPoint("BOTTOMLEFT", anchor, "TOPLEFT", -10, 2 + offset)
       end
       end)
-      --[[
-            -- move castbar ontop of other bars
-      local anchor = circleFrame
-      anchor = MultiBarBottomLeft:IsVisible() and MultiBarBottomLeft or anchor
-      anchor = MultiBarBottomRight:IsVisible() and MultiBarBottomRight or anchor
-      local pet_offset = PetActionBarFrame:IsVisible() and 40 or 0
-      CastingBarFrame:SetPoint("BOTTOM", anchor, "TOP", 0, 100 + pet_offset)
-      ]]
+
       CastingBarFrame:ClearAllPoints()
       CastingBarFrame:SetPoint("CENTER", circleFrame, 0, -300)
 

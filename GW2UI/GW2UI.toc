@@ -88,4 +88,4 @@ gw2GameToolTip.lua
 tBagSort.lua
 SUCC-bag.lua
 gw2Unitframes.lua
-
+gw2Pet.lua
