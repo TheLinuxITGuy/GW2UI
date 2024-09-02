@@ -221,16 +221,16 @@ local _G = GW2UI.GetGlobalEnv()
     
   -- move pet actionbar above other actionbars
   PetActionBarFrame:ClearAllPoints()
-  local anchor = MainMenuBarArtFrame
+  local anchor = circleFrame
 
   -- Create a function to update the anchor and position of PetActionBarFrame
   local function updatePetActionBarPosition()
     if MultiBarBottomRight:IsVisible() then
         anchor = MultiBarBottomRight
     elseif MultiBarBottomLeft:IsVisible() then
-        anchor = MultiBarBottomLeft
+        anchor = UIParent
     end
-    PetActionBarFrame:SetPoint("CENTER", anchor, "CENTER", -30, 70)  --MOVES PET BAR
+    PetActionBarFrame:SetPoint("CENTER", anchor, "CENTER", -70, -380)  --MOVES PET BAR
   end
 
   -- Call the function initially to set the position
