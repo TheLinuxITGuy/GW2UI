@@ -25,4 +25,3 @@ This is a stand-alone addon made for the Turtle WoW 1.12.1 client.
 - Based on [ShaguTweaks](https://shagu.org/ShaguTweaks/)
 - Art from [MortalKnight](https://github.com/Mortalknight/GW2_UI)
 - Code from [Grylls](https://github.com/GryllsAddons/ShaguTweaks-mods)
-- Amazing fixes from [Ark](https://github.com/CrimsonHollow/tDF-more-mods) & [Gold](https://github.com/G0ldhart)
