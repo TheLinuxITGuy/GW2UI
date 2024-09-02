@@ -1,3 +1,6 @@
+--[[
+
+]]
 -- Create a new frame
 local petHealthFrame = CreateFrame("StatusBar", "PetHealthFrame", UIParent)
 petHealthFrame:SetWidth(100) -- Set the size of the frame
@@ -16,15 +19,19 @@ healthText:SetTextColor(1, 1, 1) -- Set the text color to white
 
 -- Function to update the health bar and text
 local function UpdatePetHealth()
-    if UnitExists("pet") then
+    --if UnitExists("pet") then
+    if PetActionBarFrame then
         local health = UnitHealth("pet")
         local maxHealth = UnitHealthMax("pet")
         petHealthFrame:SetMinMaxValues(0, maxHealth)
         petHealthFrame:SetValue(health)
         healthText:SetText(string.format("%d%%", (health / maxHealth) * 100))
         petHealthFrame:Show()
+        --print("Pet show")
     else
         petHealthFrame:Hide()
+        healthText:Hide()
+        --print("Pet hide")
     end
 end
 
@@ -42,6 +49,39 @@ petHealthFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
 petHealthFrame:SetScript("OnEvent", function(self, event, arg1)
     if event == "UNIT_PET" or event == "PLAYER_ENTERING_WORLD" then
         UpdatePetHealth()
+    end
+end)
+
+-- Create a new frame for the pet portrait
+local petPortraitFrame = CreateFrame("Frame", "PetPortraitFrame", UIParent)
+petPortraitFrame:SetWidth(50) -- Set the size of the portrait frame
+petPortraitFrame:SetHeight(50)
+petPortraitFrame:SetPoint("LEFT", petHealthFrame, "RIGHT", 10, 0) -- Position the frame to the right of the health frame
+petPortraitFrame:SetFrameStrata("LOW")
+
+-- Create a texture for the pet portrait
+local petPortraitTexture = petPortraitFrame:CreateTexture(nil, "BACKGROUND")
+petPortraitTexture:SetAllPoints(petPortraitFrame)
+
+-- Function to update the pet portrait
+local function UpdatePetPortrait()
+    if UnitExists("pet") then
+        SetPortraitTexture(petPortraitTexture, "pet")
+        petPortraitFrame:Show()
+    else
+        petPortraitFrame:Hide()
+    end
+end
+
+-- Initial update
+UpdatePetPortrait()
+
+-- Register events to update the portrait when the pet is summoned or dismissed
+petPortraitFrame:RegisterEvent("UNIT_PET")
+petPortraitFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
+petPortraitFrame:SetScript("OnEvent", function(self, event, arg1)
+    if event == "UNIT_PET" or event == "PLAYER_ENTERING_WORLD" then
+        UpdatePetPortrait()
     end
 end)
 
