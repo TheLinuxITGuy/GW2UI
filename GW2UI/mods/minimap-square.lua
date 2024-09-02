@@ -8,11 +8,12 @@ local T = GW2UI.T
   -- Your existing code
   local gw2art = "Interface\\AddOns\\GW2UI\\img\\"
   MinimapCluster:ClearAllPoints()
-  MinimapCluster:SetPoint("BOTTOMRIGHT", UIParent, -65, 25)
+  --MinimapCluster:SetPoint("BOTTOMRIGHT", UIParent, -40, 100)
+  MinimapCluster:SetPoint("BOTTOMRIGHT", UIParent, 0, 200) --meh
 
   MinimapBorder:SetTexture(nil)
-  Minimap:SetPoint("CENTER", MinimapCluster, "TOP", 9, -98)
-  --Minimap:SetPoint("CENTER", MinimapCluster, "CENTER", 0, 0)
+  --Minimap:SetPoint("CENTER", MinimapCluster, "TOP", 9, -98)
   Minimap:SetMaskTexture("Interface\\BUTTONS\\WHITE8X8")
-  Minimap:SetWidth(300)
-  Minimap:SetHeight(185)
+  Minimap:SetWidth(250)
+  Minimap:SetHeight(250)
+  Minimap:SetPoint("BOTTOMRIGHT", UIParent, -5, 35) -- this is what matters
