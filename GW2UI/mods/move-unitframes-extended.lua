@@ -18,6 +18,8 @@ local movables = {
 
 local nonmovables = {
   --"gw2MicroMenu",
+  "PetActionBarFrame",
+  "TargetFrame",
   "Minimap",
   "DurabilityFrame",
   "BuffButton0", -- buffs
