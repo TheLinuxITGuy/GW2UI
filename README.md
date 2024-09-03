@@ -25,3 +25,6 @@ This is a stand-alone addon made for the Turtle WoW 1.12.1 client.
 - Based on [ShaguTweaks](https://shagu.org/ShaguTweaks/)
 - Art from [MortalKnight](https://github.com/Mortalknight/GW2_UI)
 - Code from [Grylls](https://github.com/GryllsAddons/ShaguTweaks-mods)
+
+## Donate
+https://www.paypal.com/donate/?hosted_button_id=WPTX2BMBARSG2
